@@ -20,7 +20,7 @@ public class ProductService {
         p.stock -= qty;
 
         if (p.stock == 0) {
-            System.out.println("🔥 SOLD OUT: " + p.name);
+            System.out.println("SOLD OUT: " + p.name);
         }
 
         return true;

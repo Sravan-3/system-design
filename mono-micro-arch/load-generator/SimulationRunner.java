@@ -17,6 +17,6 @@ public class SimulationRunner {
         executor.shutdown();
         executor.awaitTermination(10, TimeUnit.MINUTES);
 
-        System.out.println("✅ Load test finished");
+        System.out.println("Load test finished");
     }
 }

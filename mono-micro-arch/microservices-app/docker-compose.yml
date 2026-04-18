@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+
+  gateway:
+    build: ./api-gateway
+    container_name: gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - order
+    networks:
+      - micro-net
+
+  order:
+    build: ./order-service
+    container_name: order
+    depends_on:
+      - payment
+      - inventory
+    networks:
+      - micro-net
+
+  payment:
+    build: ./payment-service
+    container_name: payment
+    networks:
+      - micro-net
+
+  inventory:
+    build: ./inventory-service
+    container_name: inventory
+    networks:
+      - micro-net
+
+networks:
+  micro-net:
+    driver: bridge

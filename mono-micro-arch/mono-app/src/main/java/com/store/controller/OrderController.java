@@ -23,7 +23,7 @@ public class OrderController {
         int count = counter.incrementAndGet();
 
         if (count % 100 == 0) {
-            System.out.println("🔥 Requests processed: " + count);
+            System.out.println("Requests processed: " + count);
         }
 
         productService.buyProduct(productId, qty);

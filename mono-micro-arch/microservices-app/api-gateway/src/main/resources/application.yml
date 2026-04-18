@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+spring:
+  main:
+    web-application-type: reactive
+
+  cloud:
+    gateway:
+      routes:
+        - id: order-service
+          uri: http://order:8081
+          predicates:
+            - Path=/order,/order/**
