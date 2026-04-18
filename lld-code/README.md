@@ -31,8 +31,15 @@ This repository includes **example implementations** of common LLD patterns, suc
   - Proxy
 
 - **Behavioral Patterns**
-  - (Yet to start)
-  
+  - chain-of-responsibility-pattern
+  - command-pattern
+  - iterator-pattern
+  - mediator-pattern
+  - memento-pattern
+  - observer-pattern
+  - state-pattern
+  - strategy-pattern
+  - template-pattern
 
 Each pattern is implemented with:
 - Minimal but clear classes
